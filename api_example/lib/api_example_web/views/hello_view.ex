@@ -1,3 +1,3 @@
-defmodule ApiExample.HelloView do
+defmodule ApiExampleWeb.HelloView do
   use ApiExampleWeb, :view
 end
