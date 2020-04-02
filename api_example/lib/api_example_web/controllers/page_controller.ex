@@ -1,4 +1,4 @@
-defmodule ApiExampleWeb.UserController do
+defmodule ApiExampleWeb.PageController do
   use ApiExampleWeb, :controller
 
   def index(conn, _params) do
@@ -8,7 +8,7 @@ defmodule ApiExampleWeb.UserController do
         email: "joe@example.com",
         password: "topsecret",
         stooge: "moe"
-        },
+      },
       %{
         name: "Anne",
         email: "anne@example.com",
