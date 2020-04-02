@@ -13,16 +13,17 @@ defmodule ApiExampleWeb.Router do
     plug(:accepts, ["json"])
   end
 
-  # scope "/", ApiExampleWeb do
-  #   pipe_through :browser
+  scope "/", ApiExampleWeb do
+    pipe_through(:browser)
 
-  #   get "/", PageController, :index
-  # end
+    get("/", PageController, :index)
+    get("/hello", HelloController, :index)
+  end
 
   # Other scopes may use custom stacks.
-  scope "/api/v1", ApiExampleWeb do
-    pipe_through(:api)
+  # scope "/api/v1", ApiExampleWeb do
+  #   pipe_through(:api)
 
-    get("/users", UserController, :index)
-  end
+  #   get("/users", UserController, :index)
+  # end
 end
